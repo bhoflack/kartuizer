@@ -6,12 +6,12 @@ body {
 }
 
 div.header {
-	background: #ea6600;
+	background: #60016D;
 	height: 50px;
 	position: absolute;
 	top: 0px;
 	width: 100%;
-	border-bottom: 4px solid #fb6d00;
+	border-bottom: 4px solid #9b02b0;
 	
 }
 
@@ -27,7 +27,7 @@ div.header a {
 }
 
 div.top {
-	background: #ffe9d9;
+	background: #d9f9ad;
 	background-image: url(texture.png);
 }
 
