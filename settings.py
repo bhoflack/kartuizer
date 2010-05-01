@@ -61,6 +61,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+	'kartuizer.app.middleware.wiki.WikiMiddleware'
 )
 
 ROOT_URLCONF = 'kartuizer.urls'
@@ -69,7 +70,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-		"/Users/brh/Documents/Work/python/kartuizer/templates"
+		"/Users/brecht/Documents/Work/python/kartuizer/templates"
 )
 
 INSTALLED_APPS = (
@@ -81,4 +82,4 @@ INSTALLED_APPS = (
 		'django.contrib.admin'
 )
 
-STATIC_DOC_ROOT = '/Users/brh/Documents/Work/python/kartuizer/site_media'
+STATIC_DOC_ROOT = '/Users/brecht/Documents/Work/python/kartuizer/site_media'
