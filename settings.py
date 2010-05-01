@@ -61,7 +61,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'kartuizer.app.middleware.wiki.WikiMiddleware'
 )
 
 ROOT_URLCONF = 'kartuizer.urls'
@@ -78,6 +77,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+	'django.contrib.markup',
 		'kartuizer.app',
 		'django.contrib.admin'
 )
