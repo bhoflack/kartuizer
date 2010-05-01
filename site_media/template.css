@@ -1,0 +1,97 @@
+body {
+	background: #fff3ea;
+	font-family: helvetica,arial,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+div.header {
+	background: #ea6600;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	border-bottom: 4px solid #fb6d00;
+	
+}
+
+div.links {
+	margin-top: 12px;
+	padding-left: 2em;
+	font-size: 24pt;
+}
+
+div.header a {
+	color: #fff;
+	font-size: 18px;
+}
+
+div.top {
+	background: #ffe9d9;
+	background-image: url(texture.png);
+}
+
+div.inleiding {
+	padding-left: 4em;
+	position: relative;
+	top: 40px;
+	width: 260px;
+}
+
+div.inleiding h1 {
+	text-align: left;
+	font-size: 44px;
+	font-family: helvetica, arial, sans-serif;
+	color: #000;
+	margin-bottom: 5px;
+}
+
+div.inleiding h2 {
+	text-align: left;
+	font-size: 20px;
+	font-family: helvetica, arial, sans-serif;
+	margin: 0 0 30px 0;
+	color: #555;
+	width: 240px;
+}
+
+div.inleiding p {
+	width: 260px;
+	color: #666;
+	font-size: 12pt;
+	font-style: italic;
+}
+
+div.reviews {
+	position: relative;
+	top: 60px;
+	font-style: italic;
+	color: #666;
+	width: 260px;
+	padding-left: 4em;
+	background: #ffe9d9;
+	background-image: url(texture.png);
+}
+
+div.picture img {
+	margin-left: 350px;
+	display: block;
+	position: absolute;
+	top: 80px;
+}
+
+div.content {
+	position: absolute;
+	top: 578px;
+	width: 80%;
+	border-top: 4px solid #fff3ea;
+}
+
+div.container {
+	height: 550px;
+}
+
+div.introduction {
+	margin-left: 1em;
+}
+
