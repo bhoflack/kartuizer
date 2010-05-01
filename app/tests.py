@@ -7,17 +7,17 @@ Replace these with more appropriate tests for your application.
 
 from django.test import TestCase
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
+class WikiTest(TestCase):
+    def test_url(self):
         """
-        Tests that 1 + 1 always equals 2.
+        Tests that url is correctly translated.
         """
-        self.failUnlessEqual(1 + 1, 2)
-
-__test__ = {"doctest": """
-Another way to test that 1 + 1 is equal to 2.
-
->>> 1 + 1 == 2
-True
-"""}
-
+        urltext = """bestel a la carte of proef 
+					van ons [[suggestiemenu|ons suggestiemenu]]."""
+        expected = """bestel a la carte of proef van ons 
+					<a href="/suggestiemenu">ons suggestiemenu</a>"""
+					
+        self.assertEquals(urltext, expected)
+				
+				
+				

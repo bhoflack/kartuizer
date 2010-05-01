@@ -1,15 +1,24 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Item(models.Model):
-	author = models.ForeignKey(User)
-	title = models.CharField(max_length=200)
-	dateModified = models.DateTimeField()
-	text = models.TextField()
-	publicationDate = models.DateTimeField()
-	state_Choices = ((u'New', u'New'),(u'App',u'Approved'),(u'Exp',u'Expired'))
+
+class Page(models.Model):
+	name = models.SlugField()
+	title = models.CharField(max_length=50)
+	intro = models.TextField()
+	content = models.TextField()
 	
 	def __unicode__(self):
 		return self.title
+		
+
+class MenuItem(models.Model):
+	title = models.CharField(max_length=10)
+	destination = models.CharField(max_length=255)
+	position = models.IntegerField(unique=True)
+	
+	def __unicode__(self):
+		return self.title		
+		
 
 	
