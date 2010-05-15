@@ -1,4 +1,4 @@
-from kartuizer.app.models import Page, MenuItem
+from kartuizer.app.models import Page, MenuItem, Review
 from django.contrib import admin
 
 class MenuItemAdmin(admin.ModelAdmin):
@@ -6,3 +6,4 @@ class MenuItemAdmin(admin.ModelAdmin):
 	
 admin.site.register(Page)
 admin.site.register(MenuItem, MenuItemAdmin)
+admin.site.register(Review)

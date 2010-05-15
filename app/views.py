@@ -1,13 +1,24 @@
 from django.http import HttpResponse
 from django.template import Context, loader
+import random
 
-from kartuizer.app.models import Page, MenuItem
+from kartuizer.app.models import Page, MenuItem, Review
 
 def index(request):
-		t = loader.get_template('index.html')
-		p = Page.objects.get(pk=1)
-		menuItems = MenuItem.objects.all()
-		c = Context({'page' : p,
-								 'menuitems': menuItems})
+	return page(request, 'home')
 		
-		return HttpResponse(t.render(c))
+def page(request, name):
+	t = loader.get_template('index.html')
+	p = Page.objects.get(name=name)
+	menuItems = MenuItem.objects.all()
+	reviews = Review.objects.all()
+	if len(reviews) > 0:
+		samples = random.sample(reviews, 5)
+	else:
+		samples = []
+	
+	c = Context({
+		'page': p,
+		'menuitems': menuItems,
+		'reviews': samples})
+	return HttpResponse(t.render(c))

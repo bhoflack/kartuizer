@@ -7,6 +7,7 @@ class Page(models.Model):
 	title = models.CharField(max_length=50)
 	intro = models.TextField()
 	content = models.TextField()
+	image = models.ImageField(upload_to="adminimages")
 	
 	def __unicode__(self):
 		return self.title
@@ -19,6 +20,13 @@ class MenuItem(models.Model):
 	
 	def __unicode__(self):
 		return self.title		
+
+class Review(models.Model):
+	content = models.TextField()
+	
+	def __unicode__(self):
+		return self.content
 		
+	
 
 	

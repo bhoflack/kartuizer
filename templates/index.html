@@ -26,15 +26,13 @@
 				{{page.intro|markdown}}
 			</div>
 			<div class="reviews">
-				<div class="review_1">
-					<p>"Geweldig eten,  fantastische bediening"</p>
-					<p>Carpentier Mieke</p>
-					<p>Hoflack Jose,  Torhout</p>
-				</div>
+				{% for review in samples %}
+				<p>{{review.content}}</p>
+				{% endfor %}			
 			</div>
 		</div>
 		<div class="picture">
-			<img src="site_media/resto.jpg" alt="de kartuizer" />
+			<img src="{{page.image.url}}" alt="{{page.name}}" />
 		</div>
 	</div>
 	
