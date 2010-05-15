@@ -26,8 +26,9 @@
 				{{page.intro|markdown}}
 			</div>
 			<div class="reviews">
-				{% for review in samples %}
+				{% for review in reviews %}
 				<p>{{review.content}}</p>
+				<p>{{review.author}}</p>
 				{% endfor %}			
 			</div>
 		</div>

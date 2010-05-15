@@ -12,8 +12,8 @@ def page(request, name):
 	p = Page.objects.get(name=name)
 	menuItems = MenuItem.objects.all()
 	reviews = Review.objects.all()
-	if len(reviews) > 0:
-		samples = random.sample(reviews, 5)
+	if len(reviews) >= 3:
+		samples = random.sample(reviews, 3)
 	else:
 		samples = []
 	

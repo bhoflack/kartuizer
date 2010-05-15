@@ -23,6 +23,7 @@ class MenuItem(models.Model):
 
 class Review(models.Model):
 	content = models.TextField()
+	author = models.CharField(max_length=30)
 	
 	def __unicode__(self):
 		return self.content
