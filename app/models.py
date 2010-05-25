@@ -8,11 +8,10 @@ class Page(models.Model):
 	intro = models.TextField()
 	content = models.TextField()
 	image = models.ImageField(upload_to="adminimages")
-	
+				
 	def __unicode__(self):
 		return self.title
 		
-
 class MenuItem(models.Model):
 	title = models.CharField(max_length=10)
 	destination = models.CharField(max_length=255)

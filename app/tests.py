@@ -6,18 +6,16 @@ Replace these with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from kartuizer.app.models import Page
 
-class WikiTest(TestCase):
-    def test_url(self):
-        """
-        Tests that url is correctly translated.
-        """
-        urltext = """bestel a la carte of proef 
-					van ons [[suggestiemenu|ons suggestiemenu]]."""
-        expected = """bestel a la carte of proef van ons 
-					<a href="/suggestiemenu">ons suggestiemenu</a>"""
-					
-        self.assertEquals(urltext, expected)
+class PageTest(TestCase):
+	def test_pretty_title(self):
+		"""
+		A pretty title is a title starting with a capital followed by lowercase.
+		"""
+		p = Page(title = 'mijn titel')
+		self.assertEquals(p.pretty_title(), 'Mijn titel')
+		
 				
 				
 				
