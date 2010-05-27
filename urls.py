@@ -11,6 +11,8 @@ urlpatterns = patterns('',
 		(r'^(?P<name>[a-zA-Z]*)$', 'kartuizer.app.views.page'),
 		(r'^adminimages/(?P<path>.*)$', 'django.views.static.serve', 
 			{'document_root': settings.IMAGES_ROOT}),
+		(r'^js/(?P<path>.*)$', 'django.views.static.serve',
+			{'document_root': settings.MEDIA_ROOT}),
 		)
 
 if settings.DEBUG:
