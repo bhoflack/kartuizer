@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<moowmd.css>
 
 {% load markup %}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -21,7 +22,7 @@
 	
 	<div class="top">
 		<div class="container">
-			<div class="inleiding">
+			<div class="inleiding" >
 				<h1>{{page.title.capitalize}}</h1>
 				{{page.intro|markdown}}
 			</div>
@@ -38,9 +39,10 @@
 	</div>
 	
 	<div class="content">
-		<div class="introduction">
+		<div class="introduction" >
 			<p>{{page.content|markdown}}</p>
 		</div>
 	</div>
+	<script type="text/javascript" src='/path/to/scripts/moowmd.js'></script>
 </body>
 </html>
